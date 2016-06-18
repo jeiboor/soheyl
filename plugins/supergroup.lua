@@ -5,7 +5,7 @@ local function check_member_super(cb_extra, success, result)
   local data = cb_extra.data
   local msg = cb_extra.msg
   if success == 0 then
-	send_large_msg(receiver, "Promote me to admin first!")
+	send_large_msg(receiver, "promote me to admin first!")
   end
   for k,v in pairs(result) do
     local member_id = v.peer_id
@@ -28,7 +28,13 @@ local function check_member_super(cb_extra, success, result)
 		  lock_rtl = 'no',
 		  lock_tgservice = 'yes',
 		  lock_contacts = 'no',
+		  lock spam2 = 'yes',
+		  lock english  = 'no'
 		  strict = 'no'
+		  vesion = 9.6
+		  ----------------
+		  not open source 
+		  based on teleseed!
         }
       }
       save_data(_config.moderation.data, data)
